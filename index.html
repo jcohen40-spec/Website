@@ -315,7 +315,7 @@
 		<div class="container medium">
 			<ul class="actions special">
 				<li>
-					<a href="#" class="button" onclick="copyEmail()">Copy: jonathan4cohen@gmail.com</a>
+					<a href="#" class="button" onclick="copyEmail(); return false;">Copy: jonathan4cohen@gmail.com</a>
 				</li>
 				<li>
 					<a href="https://www.linkedin.com/in/jonathan-cohen-163b3629b/" class="button alt" target="_blank">
@@ -335,9 +335,19 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+				function copyEmail() {
+				  const email = "jonathan4cohen@gmail.com";
+				  navigator.clipboard.writeText(email).then(function() {
+				    alert("Email copied to clipboard!");
+				  });
+					}
+			</script>
+				
 	</body>
 
 </html>
+
 
 
 
